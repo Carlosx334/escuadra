@@ -1,147 +1,97 @@
-# limitaciones de escuadra - version inicial (v1)
+Limitaciones de Escuadra - Versión Inicial (v1)
 
-.a continuacion se detallan las limitaciones conocidas y esperadas de escuadra en su versio inicial o planes futuros.
+A continuación, se detallan las limitaciones conocidas y esperadas de Escuadra en su versión inicial, así como algunas funcionalidades previstas para futuras versiones.
 
-## 1\. falta de integracion con herramientas de diseño garfico
+1. Falta de integración con herramientas de diseño gráfico
 
-**descripcion:** en esta version no se incluye soporte para importar ni exportar archivos de herramientas como adobe illustrator, Figma o inkscape. no es posible trabajar directamente con estos fromatos.
-**¿solucion temporal?**: si se debe exportar/convertir los archivos a formatos soportados (PNG, JPG, SVG simple) antes de usarlos en escuadra.
-**¿`planeado en futuras versines?**:si se tiene previsto integrar soporte para estos fromatos en la version v1.2.
+Descripción: En esta versión no se incluye soporte para importar ni exportar archivos de herramientas como Adobe Illustrator, Figma o Inkscape. No es posible trabajar directamente con estos formatos.
 
-## 2\. no soprta sistemas operativos moviles
+¿Solución temporal? Sí. Los archivos deben exportarse o convertirse a formatos compatibles (PNG, JPG o SVG simple) antes de utilizarlos en Escuadra.
 
-**descripcion:** la herramienta solo funciona en sistemas de escritorio: Windows, Linux, macOs. no es posible usarla en android ni iOS.
-**¿solucion temporal?**: no, no existe forma de ejecutarlo en dispositivos moviles por ahora.
-**¿planeado en futuras versiones?**: no, no esta en plan de corto/medio plazo, se priorizaran otra caracteristicas primero.
+¿Planeado para futuras versiones? Sí. Se tiene previsto integrar soporte para estos formatos en la versión v1.2.
 
-## 3\. no gestiona proyectos colaborativos simultaneos
+2. No soporta sistemas operativos móviles
 
-**descripcion:** solo permite trabajar con un usuario a la vez en un mismo proyecto.
-no hay edicion en yiempo real ni control de versiones compartido.
-**¿solucion temporal?**: si, se pueden compartir archivos manualmente manualmente y fusionar cambios por fuera de la herramienta.
-**¿planeado en futuras versiones?**: si, sedesarrollara esta funcionalidad para la version v2.0.
+Descripción: La herramienta solo funciona en sistemas operativos de escritorio como Windows, Linux y macOS. No es posible utilizarla en Android ni iOS.
 
-## 4\. sin soprte para bases de datos exteranas
+¿Solución temporal? No. Actualmente no existe una forma oficial de ejecutarla en dispositivos móviles.
 
-**descripcion:** no se puede conectar ni leer/escribir infrmacion de bases de datos com MySQL, PostgreSQL, MongoDB. solo usa archvos locales.
-**¿solucion temporal?**: no, no hay formas de conectarse a fuentes externas actuales.
-**¿planeando en futuras versiones?**: si , se agregara conectividad basicas en la v1.5.
+¿Planeado para futuras versiones? No. Esta funcionalidad no se encuentra dentro de los planes a corto o mediano plazo, ya que se priorizarán otras características.
 
+3. No gestiona proyectos colaborativos simultáneos
 
+Descripción: La herramienta solo permite trabajar con un usuario a la vez en un mismo proyecto. No cuenta con edición en tiempo real ni control de versiones compartido.
 
-## 5\. limitaciones por modulo
+¿Solución temporal? Sí. Los usuarios pueden compartir archivos manualmente y fusionar los cambios mediante herramientas externas.
 
+¿Planeado para futuras versiones? Sí. Esta funcionalidad está prevista para la versión v2.0.
+4. Sin soporte para bases de datos externas
 
+Descripción: Actualmente no es posible conectar, leer ni escribir información en bases de datos externas como MySQL, PostgreSQL o MongoDB. La herramienta únicamente trabaja con archivos locales.
 
-5.1 modulo civil
+¿Solución temporal? No. Por el momento no existe una forma de conectarse a fuentes de datos externas.
 
+¿Planeado para futuras versiones? Sí. Se agregará conectividad básica con bases de datos en la versión v1.5.
 
+5. Limitaciones por módulo
 
-descripcion: el modulo civil implementa un conjunto limitado de funcionalidades para el analisis estructural.
+5.1 Módulo Civil
 
+Descripción: El módulo Civil implementa un conjunto limitado de funcionalidades para el análisis estructural.
 
+Limitaciones conocidas
 
-limitaciones conocidas:
+- Solo soporta vigas simplemente apoyadas.
+- No soporta vigas continuas.
+- No soporta marcos estructurales complejos.
+- No realiza análisis sísmico.
+- No contempla cargas dinámicas avanzadas.
+- Los resultados deben considerarse aproximaciones para escenarios básicos.
 
-\- solo soporta vigas simplemente apoyadas.
+5.2 Módulo Eléctrica
 
-\- no soporta vigas continuas.
+Descripción: El módulo Eléctrica está orientado a circuitos básicos de corriente continua.
 
-\- no soporta marcos estructurales complejos.
+Limitaciones conocidas
 
-\- no realiza analisis sismico.
+- Solo trabaja con corriente continua (DC).
+- No soporta corriente alterna (AC).
+- Solo considera resistencias puras.
+- No soporta capacitores ni inductores.
+- No realiza análisis fasorial.
+- No contempla fenómenos avanzados de potencia eléctrica.
+- 5.3 Módulo Matemáticas
 
-\- no contempla cargas dinamicas avanzadas.
+Descripción: El módulo Matemáticas utiliza la precisión numérica estándar del lenguaje.
 
-\- los resultados deben considerarse aproximaciones para escenarios basicos.
+Limitaciones conocidas
 
+- No utiliza bibliotecas de alta precisión numérica.
+- Pueden existir errores de redondeo.
+- Pueden existir errores de punto flotante.
+- Las operaciones repetidas pueden acumular pequeñas diferencias numéricas.
+- Algunos resultados pueden variar ligeramente dependiendo de la plataforma utilizada.
 
+5.4 Módulo Geometría
 
-5.2 modulo electrica
+Descripción: El módulo Geometría se enfoca en operaciones geométricas básicas.
 
+Limitaciones conocidas
 
+- Solo soporta figuras regulares.
+- No soporta figuras irregulares complejas.
+- No incluye modelado tridimensional avanzado.
+- Algunas fórmulas asumen condiciones ideales.
+- No contempla geometría computacional avanzada.
 
-descripcion: el modulo electrica esta orientado a circuitos basicos de corriente continua.
+5.5 Módulo Sistemas
 
+Descripción: El módulo Sistemas implementa soporte limitado para el manejo de caracteres.
 
+Limitaciones conocidas
 
-limitaciones conocidas:
-
-\- solo trabaja con corriente continua (DC).
-
-\- no soporta corriente alterna (AC).
-
-\- solo considera resistencias puras.
-
-\- no soporta capacitores ni inductores.
-
-\- no realiza analisis fasorial.
-
-\- no contempla fenomenos avanzados de potencia electrica.
-
-
-
-5.3 modulo matematicas
-
-
-
-descripcion: el modulo matematicas utiliza la precision numerica estandar del lenguaje.
-
-
-
-limitaciones conocidas:
-
-\- no utiliza bibliotecas de alta precision numerica.
-
-\- pueden existir errores de redondeo.
-
-\- pueden existir errores de punto flotante.
-
-\- operaciones repetidas pueden acumular pequeñas diferencias numericas.
-
-\- algunos resultados pueden variar ligeramente dependiendo de la plataforma utilizada.
-
-
-
-5.4 modulo geometria
-
-
-
-descripcion: el modulo geometria se enfoca en operaciones geometricas basicas.
-
-
-
-limitaciones conocidas:
-
-\- solo soporta figuras regulares.
-
-\- no soporta figuras irregulares complejas.
-
-\- no incluye modelado tridimensional avanzado.
-
-\- algunas formulas asumen condiciones ideales.
-
-\- no contempla geometria computacional avanzada.
-
-
-
-5.5 modulo sistemas
-
-
-
-descripcion: el modulo sistemas implementa soporte limitado para manejo de caracteres.
-
-
-
-limitaciones conocidas:
-
-\- solo soporta caracteres ASCII del rango 0 al 127.
-
-\- no soporta completamente Unicode.
-
-\- caracteres especiales pueden producir resultados inesperados.
-
-\- no existe soporte completo para alfabetos internacionales.
-
-\- el procesamiento de texto avanzado no esta implementado.
-
+- Solo soporta caracteres ASCII en el rango de 0 a 127.
+- No soporta completamente Unicode.
+- Los caracteres especiales pueden producir resultados inesperados.
+- No existe soporte completo para alfabetos internacionales.
+- El procesamiento avanzado de texto no está implementado.
