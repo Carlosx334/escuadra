@@ -228,3 +228,29 @@ pip install -e .
 * docs/guia-contribuidor-primeros-pasos.md
 * docs/arquitectura.md
 * pyproject.toml
+
+---
+
+# Generar ejecutable standalone con PyInstaller
+
+Instale las dependencias de desarrollo si aún no lo ha hecho:
+
+```bash
+pip install -e ".[dev]"
+```
+
+Desde la raíz del proyecto ejecute:
+
+```bash
+pyinstaller escuadra.spec
+```
+
+PyInstaller utilizará el archivo `escuadra.spec` para generar el ejecutable standalone.
+
+El ejecutable se generará en el directorio:
+
+```text
+dist/
+```
+
+El ejecutable puede ejecutarse sin necesidad de tener Python instalado en la máquina destino.
